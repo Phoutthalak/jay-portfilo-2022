@@ -6,7 +6,7 @@ import { Project } from "../../typing";
 const query = groq`
 *[_type == 'project'] {
   ...,
-  technologies[] ->
+  technologies[] -> | order(dateStarted desc)
 }
 `;
 type Data = {

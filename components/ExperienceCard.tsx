@@ -24,9 +24,9 @@ function ExperienceCard({ experience }: Props) {
                 alt=""
             />
 
-            <div className="px-0 md:px-10">
-                <h4 className="text-4xl font-light">{experience?.joTitle}</h4>
-                <p className="font-bold text-2xl mt-1">{experience?.company}</p>
+            <div className="flex flex-col px-0 md:px-10 items-center">
+                <h4 className="font-bold text-2xl mt-1 text-center">{experience?.jobTitle}</h4>
+                <p className="text-2xl font-light text-center">{experience?.company}</p>
                 <div className="flex space-x-2 my-2">
                     {experience.technologies.map((technology) => (
                         <img

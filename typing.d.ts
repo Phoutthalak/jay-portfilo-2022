@@ -56,7 +56,7 @@ export interface Experience extends SanityBody {
     dateStarted: date;
     dateEnded: date;
     isCurrentlyWorkingHere: boolean;
-    joTitle:string;
+    jobTitle:string;
     points: string [];
     technologies: Technology[];
     

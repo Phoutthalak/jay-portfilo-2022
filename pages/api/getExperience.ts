@@ -6,8 +6,8 @@ import { Experience } from "../../typing";
 const query = groq`
 *[_type == 'experience'] {
   ...,
-  technologies[] -> | order(dateStarted desc, dateEnded)
-}
+  technologies[] ->
+} | order(dateStarted desc, dateEnded)
 `;
 type Data = {
     experiences: Experience[]

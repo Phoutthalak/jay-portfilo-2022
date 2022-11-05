@@ -26,8 +26,8 @@ function ContactMe({ }: Props) {
     <div className="h-screen relative flex overflow-hidden flex-col text-center md:flex-row max-w-7xl justify-evenly mx-auto items-center z-0">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Contact</h3>
 
-      <div className='flex flex-col space-y-7'>
-        <h4 className="text-4xl font-semibold text-center">
+      <div className='flex flex-col space-y-3 md:space-y-5'>
+        <h4 className="text-2xl md:text-4xl font-semibold text-center">
           I have got just what you need. {" "}
           <span className="underline decoration-[#F7AB0A]/50">Lets Talk</span>
         </h4>
@@ -45,7 +45,7 @@ function ContactMe({ }: Props) {
 
           <div className='flex items-center space-x-3 justify-center'>
             <MapPinIcon className='text-[#F7AB0A] h-5 w-5 animate-pulse' />
-            <p className='text-1xl'>TadthongRD, Nonkhelek, Sikhottabong VTE 01020</p>
+            <p className='text-1xl'>Dongpaina RD, Phonsinuan, Sisattanak VTE 01020</p>
           </div>
         </div>
 

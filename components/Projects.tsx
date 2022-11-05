@@ -35,8 +35,8 @@ function Projects({ projects }: Props) {
                             alt=""
                         />
 
-                        <div className="space-y-10 px-0 md:px10 max-w-6xl">
-                            <h4 className="text-4xl font-semibold text-center">
+                        <div className="space-y-4 px-0 md:px10 md:space-y-7 max-w-6xl">
+                            <h4 className="text-2xl md:text-4xl font-semibold text-center">
                                 <span>Case Study {i + 1} of {projects.length}:</span>{" "}
                                 {project?.title}
                             </h4>
@@ -44,7 +44,7 @@ function Projects({ projects }: Props) {
                                 {project?.technologies.map((technology) => (
                                     <img
                                         key={technology._id}
-                                        className="h-10 w-10 rounded-full object-contain bg-white"
+                                        className="h-7 w-7 md:h-10 md:w-10 rounded-full object-contain bg-white"
                                         src={urlFor(technology.image).url()}
                                         alt=""
                                     />

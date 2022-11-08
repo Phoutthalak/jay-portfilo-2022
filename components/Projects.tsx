@@ -32,13 +32,13 @@ function Projects({ projects }: Props) {
                                 transition={{ duration: 1.2 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="w-[500px] h-[200px] cursor-pointer"
+                                className="w-[200px] h-[130px] md:w-[300px] md:h-[180px] cursor-pointer"
                                 src={urlFor(project?.image).url()}
                                 alt=""
                             />
                         </a>
                         <div className="space-y-4 px-0 md:px10 md:space-y-7 max-w-6xl">
-                            <h4 className="text-2xl md:text-4xl font-semibold text-center">
+                            <h4 className="text-1xl md:text-2xl lg:text-4xl font-semibold text-center">
                                 <span>Case Study {i + 1} of {projects.length}:</span>{" "}
                                 {project?.title}
                             </h4>
@@ -52,7 +52,7 @@ function Projects({ projects }: Props) {
                                     />
                                 ))}
                             </div>
-                            <p className="text-lg text-center md:text-left">
+                            <p className="text-xs md:text-lg text-center md:text-left">
                                 {project?.summary}
                             </p>
                         </div>

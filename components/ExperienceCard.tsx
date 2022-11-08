@@ -26,8 +26,8 @@ function ExperienceCard({ experience }: Props) {
             />
 
             <div className="flex flex-col px-0 md:px-10 items-center">
-                <h4 className="font-bold text-2xl mt-1 text-center">{experience?.jobTitle}</h4>
-                <p className="text-2xl font-light text-center">{experience?.company}</p>
+                <h4 className="font-bold text-1xl md:text-2xl mt-1 text-center">{experience?.jobTitle}</h4>
+                <p className="text-1xl md:text-2xl font-light text-center">{experience?.company}</p>
                 <div className="flex space-x-2 my-2">
                     {experience.technologies.map((technology) => (
                         <img
@@ -43,7 +43,7 @@ function ExperienceCard({ experience }: Props) {
                     {experience.isCurrentlyWorkingHere ? "Present"
                         : new Date(experience.dateEnded).toDateString()}
                 </p>
-                <ul className="list-disc space-y-2 ml-5 text-md max-h-72 overflow-y-scroll pr-5 scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
+                <ul className="list-disc space-y-2 ml-5 text-sm md:text-md max-h-72 overflow-y-scroll pr-5 scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
                     {experience.points.map((point, i) => (
                         <li key={i}>{point}</li>
                     ))}

@@ -25,11 +25,11 @@ function About({ pageInfo}: Props) {
                 alt=""
             />
             <div className="space-y-7 px-0 md:px-10 mt-7">
-                <h4 className="text-3xl font-semibold">Here is a{" "}
+                <h4 className="text-2xl md:text-3xl font-semibold">Here is a{" "}
                     <span className="underline decoration-[#F7AB0A]/50">little</span>
                     {" "}background
                 </h4>
-                <p className="text-base h-72 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
+                <p className=" text-sm md:text-base h-72 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
                     {pageInfo.backgroundInformation}
                 </p>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { Project } from '../typing';
 import { urlFor } from '../sanity';
+import Link from 'next/link';
 
 type Props = {
     projects: Project[];
@@ -22,19 +23,20 @@ function Projects({ projects }: Props) {
                     <div
                         key={project._id}
                         className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-                        <motion.img
-                            initial={{
-                                y: -200,
-                                opacity: 0,
-                            }}
-                            transition={{ duration: 1.2 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="w-[500px] h-[200px]"
-                            src={urlFor(project?.image).url()}
-                            alt=""
-                        />
-
+                        <a target="_blank" href={project.linkToBuild} rel="noopener noreferrer">
+                            <motion.img
+                                initial={{
+                                    y: -200,
+                                    opacity: 0,
+                                }}
+                                transition={{ duration: 1.2 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="w-[500px] h-[200px] cursor-pointer"
+                                src={urlFor(project?.image).url()}
+                                alt=""
+                            />
+                        </a>
                         <div className="space-y-4 px-0 md:px10 md:space-y-7 max-w-6xl">
                             <h4 className="text-2xl md:text-4xl font-semibold text-center">
                                 <span>Case Study {i + 1} of {projects.length}:</span>{" "}
